@@ -1,0 +1,107 @@
+{% extends "learning_logs/base.html" %}
+
+{% block title %}Início | Learning Log{% endblock title %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="hero-badge">
+            Seu espaço de aprendizagem
+        </span>
+
+        <h2>
+            Organize seus estudos.
+            <br>
+            Registre sua evolução.
+        </h2>
+
+        <p>
+            O Learning Log é uma aplicação para você registrar
+            o que está aprendendo, organizar seus conhecimentos
+            e acompanhar sua evolução ao longo do tempo.
+        </p>
+
+        {% if user.is_authenticated %}
+
+            <a
+                class="hero-button"
+                href="{% url 'learning_logs:topics' %}">
+                Ver meus tópicos
+            </a>
+
+        {% else %}
+
+            <a
+                class="hero-button"
+                href="{% url 'login' %}">
+                Começar agora
+            </a>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+
+<section class="features">
+
+    <div class="feature-card">
+
+        <div class="feature-icon">
+            📚
+        </div>
+
+        <h3>
+            Organize
+        </h3>
+
+        <p>
+            Crie tópicos para separar diferentes
+            áreas e assuntos dos seus estudos.
+        </p>
+
+    </div>
+
+
+    <div class="feature-card">
+
+        <div class="feature-icon">
+            📝
+        </div>
+
+        <h3>
+            Registre
+        </h3>
+
+        <p>
+            Adicione conteúdos e anotações
+            dentro de cada tópico.
+        </p>
+
+    </div>
+
+
+    <div class="feature-card">
+
+        <div class="feature-icon">
+            🚀
+        </div>
+
+        <h3>
+            Evolua
+        </h3>
+
+        <p>
+            Mantenha seus conhecimentos organizados
+            e acompanhe sua jornada de aprendizagem.
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock content %}

@@ -1,0 +1,63 @@
+{% extends "learning_logs/base.html" %}
+
+{% block title %}
+    Adicionar conteúdo | Learning Log
+{% endblock title %}
+
+{% block content %}
+
+<div class="form-page">
+
+    <div class="form-card">
+
+        <div class="form-header">
+
+            <span class="section-badge">
+                {{ topic.text }}
+            </span>
+
+            <h2>
+                Adicionar conteúdo
+            </h2>
+
+            <p>
+                Registre uma nova anotação ou conhecimento
+                relacionado a este tópico.
+            </p>
+
+        </div>
+
+
+        <form
+            action="{% url 'learning_logs:new_entry' topic.id %}"
+            method="post"
+            class="learning-form">
+
+            {% csrf_token %}
+
+            {{ form.as_div }}
+
+            <div class="form-actions">
+
+                <button
+                    class="submit-button"
+                    name="submit"
+                    type="submit">
+                    Adicionar conteúdo
+                </button>
+
+                <a
+                    class="cancel-button"
+                    href="{% url 'learning_logs:topic' topic.id %}">
+                    Cancelar
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock content %}

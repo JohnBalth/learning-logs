@@ -1,0 +1,74 @@
+{% extends "learning_logs/base.html" %}
+
+{% block title %}
+    Excluir conteúdo | Learning Log
+{% endblock title %}
+
+{% block content %}
+
+<div class="form-page">
+
+    <div class="delete-card">
+
+        <div class="delete-icon">
+            ⚠️
+        </div>
+
+        <div class="delete-header">
+
+            <span class="delete-badge">
+                Atenção
+            </span>
+
+            <h2>
+                Excluir conteúdo?
+            </h2>
+
+            <p>
+                Tem certeza que deseja excluir esta anotação?
+                Esta ação não poderá ser desfeita.
+            </p>
+
+        </div>
+
+
+        <div class="entry-preview">
+
+            <span>
+                Conteúdo que será excluído:
+            </span>
+
+            <p>
+                {{ entry.text|truncatewords:30 }}
+            </p>
+
+        </div>
+
+
+        <form method="post">
+
+            {% csrf_token %}
+
+            <div class="delete-actions">
+
+                <button
+                    class="delete-confirm-button"
+                    type="submit">
+                    Sim, excluir
+                </button>
+
+                <a
+                    class="cancel-button"
+                    href="{% url 'learning_logs:topic' topic.id %}">
+                    Cancelar
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock content %}

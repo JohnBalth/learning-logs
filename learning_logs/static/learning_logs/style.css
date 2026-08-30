@@ -1,0 +1,1782 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f4f7fb;
+
+    color: #1f2937;
+
+    min-height: 100vh;
+}
+
+header {
+    background-color: #111827;
+
+    color: white;
+
+    padding: 18px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    text-decoration: none;
+
+    color: white;
+}
+
+.logo h1 {
+    font-size: 26px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO
+========================================================= */
+
+.nav-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+.user-greeting {
+    font-size: 14px;
+
+    color: #d1d5db;
+}
+
+.nav-link {
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+.nav-link:hover {
+    background-color: #374151;
+}
+
+
+/* =========================================================
+   BOTÕES GERAIS
+========================================================= */
+
+.btn {
+    border: none;
+
+    cursor: pointer;
+
+    padding: 9px 16px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.btn-logout {
+    background-color: #ef4444;
+
+    color: white;
+}
+
+.btn-logout:hover {
+    background-color: #dc2626;
+}
+
+.btn-login {
+    display: inline-block;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 9px 16px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.btn-login:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* =========================================================
+   ÁREA PRINCIPAL
+========================================================= */
+
+main {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 0 20px;
+}
+
+
+/* =========================================================
+   TÍTULOS
+========================================================= */
+
+h1,
+h2,
+h3 {
+    color: #111827;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================================
+   PÁGINA INICIAL
+========================================================= */
+
+.hero {
+    background-color: white;
+
+    padding: 70px 50px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.hero-content {
+    max-width: 750px;
+
+    margin: 0 auto;
+}
+
+.hero-badge {
+    display: inline-block;
+
+    background-color: #eff6ff;
+
+    color: #2563eb;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+
+    color: #111827;
+}
+
+.hero p {
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #6b7280;
+
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 24px;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+.hero-button:hover {
+    background-color: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CARDS DA PÁGINA INICIAL
+========================================================= */
+
+.features {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+    transition: 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #6b7280;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.section-badge {
+    display: inline-block;
+
+    background-color: #eff6ff;
+
+    color: #2563eb;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   PÁGINA DE TÓPICOS
+========================================================= */
+
+.topics-header {
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 25px;
+}
+
+.topics-header h2 {
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+.topics-header p {
+    color: #6b7280;
+
+    line-height: 1.6;
+
+    max-width: 600px;
+}
+
+
+/* =========================================================
+   BOTÃO NOVO TÓPICO
+========================================================= */
+
+.new-topic-button {
+    display: inline-block;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 18px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    transition: 0.2s;
+}
+
+.new-topic-button:hover {
+    background-color: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   LISTA DE TÓPICOS
+========================================================= */
+
+.topics-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.topic-card {
+    background-color: white;
+
+    padding: 25px 30px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    transition: 0.2s;
+}
+
+.topic-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.08);
+}
+
+.topic-info {
+    min-width: 0;
+
+    flex: 1;
+}
+
+.topic-info h3 {
+    font-size: 20px;
+
+    margin-bottom: 8px;
+
+    word-break: break-word;
+}
+
+.topic-info p {
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   AÇÕES DOS TÓPICOS
+========================================================= */
+
+.topic-actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    flex-shrink: 0;
+}
+
+.open-topic-button {
+    display: inline-block;
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    padding: 8px 13px;
+
+    border-radius: 7px;
+
+    white-space: nowrap;
+
+    transition: 0.2s;
+}
+
+.open-topic-button:hover {
+    color: #1d4ed8;
+
+    background-color: #eff6ff;
+}
+
+.edit-topic-button {
+    display: inline-block;
+
+    background-color: #eff6ff;
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    padding: 8px 13px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    transition: 0.2s;
+}
+
+.edit-topic-button:hover {
+    background-color: #dbeafe;
+}
+
+.delete-topic-button {
+    display: inline-block;
+
+    background-color: #fef2f2;
+
+    color: #dc2626;
+
+    text-decoration: none;
+
+    padding: 8px 13px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    transition: 0.2s;
+}
+
+.delete-topic-button:hover {
+    background-color: #fee2e2;
+}
+
+
+/* =========================================================
+   NENHUM TÓPICO
+========================================================= */
+
+.empty-topics {
+    background-color: white;
+
+    padding: 60px 30px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.empty-icon {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+.empty-topics h3 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.empty-topics p {
+    color: #6b7280;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   BUSCA
+========================================================= */
+
+.search-card {
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    margin-bottom: 20px;
+}
+
+.search-form {
+    display: flex;
+
+    gap: 10px;
+}
+
+.search-form input {
+    flex: 1;
+
+    padding: 12px 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.search-form input:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.search-form button {
+    border: none;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.search-form button:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* =========================================================
+   RESULTADO DA BUSCA
+========================================================= */
+
+.search-result-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+    padding: 0 5px;
+}
+
+.search-result-info p {
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+.search-result-info strong {
+    color: #111827;
+}
+
+.search-result-info a {
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.search-result-info a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   DESTAQUE DA BUSCA
+========================================================= */
+
+.search-match {
+    margin-top: 14px;
+
+    padding: 12px 14px;
+
+    background: #f8fafc;
+
+    border-left: 4px solid #4f46e5;
+
+    border-radius: 8px;
+}
+
+.search-match strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #4f46e5;
+
+    font-size: 0.9rem;
+}
+
+.search-match p {
+    margin: 0;
+
+    color: #475569;
+
+    line-height: 1.6;
+}
+
+.search-match mark {
+    background: #fef08a;
+
+    color: #1e293b;
+
+    padding: 2px 4px;
+
+    border-radius: 4px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PÁGINA DO TÓPICO
+========================================================= */
+
+.topic-page-header {
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 25px;
+}
+
+.topic-page-header h2 {
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+.topic-page-header p {
+    color: #6b7280;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   BOTÃO NOVA ANOTAÇÃO
+========================================================= */
+
+.new-entry-button {
+    display: inline-block;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 18px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    transition: 0.2s;
+}
+
+.new-entry-button:hover {
+    background-color: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   LISTA DE ANOTAÇÕES
+========================================================= */
+
+.entries-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.entry-card {
+    background-color: white;
+
+    padding: 25px 30px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    transition: 0.2s;
+}
+
+.entry-card:hover {
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.08);
+}
+
+.entry-header {
+    margin-bottom: 15px;
+}
+
+.entry-date {
+    color: #9ca3af;
+
+    font-size: 12px;
+}
+
+.entry-text {
+    color: #374151;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    word-break: break-word;
+}
+
+.entry-text p {
+    margin-bottom: 12px;
+}
+
+.entry-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   AÇÕES DAS ANOTAÇÕES
+========================================================= */
+
+.entry-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+.edit-entry-button,
+.delete-entry-button {
+    display: inline-block;
+
+    text-decoration: none;
+
+    padding: 7px 12px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.edit-entry-button {
+    background-color: #eff6ff;
+
+    color: #2563eb;
+}
+
+.edit-entry-button:hover {
+    background-color: #dbeafe;
+}
+
+.delete-entry-button {
+    background-color: #fef2f2;
+
+    color: #dc2626;
+}
+
+.delete-entry-button:hover {
+    background-color: #fee2e2;
+}
+
+
+/* =========================================================
+   NENHUMA ANOTAÇÃO
+========================================================= */
+
+.empty-entries {
+    background-color: white;
+
+    padding: 60px 30px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.empty-entries .empty-icon {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+.empty-entries h3 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.empty-entries p {
+    color: #6b7280;
+
+    max-width: 500px;
+
+    margin: 0 auto 25px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   VOLTAR
+========================================================= */
+
+.back-topics {
+    margin-top: 25px;
+}
+
+.back-topics a {
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.back-topics a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   FORMULÁRIOS
+========================================================= */
+
+.form-page {
+    display: flex;
+
+    justify-content: center;
+}
+
+.form-card {
+    width: 100%;
+
+    max-width: 650px;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.form-header {
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: #6b7280;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CAMPOS DOS FORMULÁRIOS
+========================================================= */
+
+.learning-form p {
+    margin-bottom: 20px;
+}
+
+.learning-form label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.learning-form input,
+.learning-form textarea,
+.learning-form select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    background-color: white;
+
+    color: #1f2937;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.learning-form input:focus,
+.learning-form textarea:focus,
+.learning-form select:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.learning-form textarea {
+    min-height: 180px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ERROS DO FORMULÁRIO
+========================================================= */
+
+.learning-form .errorlist {
+    color: #dc2626;
+
+    margin-bottom: 8px;
+
+    padding-left: 18px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   BOTÕES DOS FORMULÁRIOS
+========================================================= */
+
+.form-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.submit-button {
+    border: none;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+.cancel-button {
+    display: inline-block;
+
+    background-color: #f3f4f6;
+
+    color: #374151;
+
+    text-decoration: none;
+
+    padding: 12px 20px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.cancel-button:hover {
+    background-color: #e5e7eb;
+}
+
+
+/* =========================================================
+   EXCLUSÃO
+========================================================= */
+
+.delete-card {
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+
+    text-align: center;
+}
+
+.delete-icon {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+.delete-header {
+    margin-bottom: 25px;
+}
+
+.delete-badge {
+    display: inline-block;
+
+    background-color: #fef2f2;
+
+    color: #dc2626;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.delete-header h2 {
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+.delete-header p {
+    color: #6b7280;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   PRÉVIA DA EXCLUSÃO
+========================================================= */
+
+.entry-preview {
+    background-color: #f9fafb;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+    text-align: left;
+}
+
+.entry-preview span {
+    display: block;
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.entry-preview p {
+    color: #374151;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   BOTÕES DE EXCLUSÃO
+========================================================= */
+
+.delete-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+.delete-confirm-button {
+    border: none;
+
+    background-color: #dc2626;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.delete-confirm-button:hover {
+    background-color: #b91c1c;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   AUTENTICAÇÃO
+========================================================= */
+
+.auth-page {
+    min-height: 70vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 20px;
+}
+
+.auth-card {
+    width: 100%;
+
+    max-width: 460px;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.auth-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.auth-icon {
+    width: 64px;
+
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 18px;
+
+    background-color: #eff6ff;
+
+    border-radius: 16px;
+
+    font-size: 30px;
+}
+
+.auth-header .section-badge {
+    margin-bottom: 12px;
+}
+
+.auth-header h2 {
+    font-size: 30px;
+
+    margin-bottom: 10px;
+
+    color: #111827;
+}
+
+.auth-header p {
+    color: #6b7280;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORMULÁRIO DE AUTENTICAÇÃO
+========================================================= */
+
+.auth-card .learning-form p {
+    margin-bottom: 18px;
+}
+
+.auth-card .learning-form label {
+    color: #374151;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.auth-card .learning-form input {
+    margin-top: 6px;
+}
+
+
+/* =========================================================
+   BOTÃO DE AUTENTICAÇÃO
+========================================================= */
+
+.auth-submit-button {
+    width: 100%;
+
+    border: none;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    padding: 13px 20px;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.auth-submit-button:hover {
+    background-color: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   RODAPÉ DA AUTENTICAÇÃO
+========================================================= */
+
+.auth-footer {
+    margin-top: 25px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid #e5e7eb;
+
+    text-align: center;
+}
+
+.auth-footer p {
+    color: #6b7280;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+.auth-register-link {
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.auth-register-link:hover {
+    color: #1d4ed8;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   MENSAGENS
+========================================================= */
+
+.messages {
+    width: 100%;
+
+    margin: 0 auto 25px;
+
+    padding: 0 0;
+}
+
+.message {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 18px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    animation: messageAppear 0.3s ease;
+}
+
+.message-success {
+    background-color: #ecfdf5;
+
+    border: 1px solid #a7f3d0;
+
+    color: #047857;
+}
+
+.message-icon {
+    width: 25px;
+
+    height: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background-color: #10b981;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+@keyframes messageAppear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .nav-right {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    main {
+        margin: 20px auto;
+    }
+
+
+    .hero {
+        padding: 45px 25px;
+    }
+
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+
+    .hero p {
+        font-size: 15px;
+    }
+
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+
+    .topics-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 25px;
+    }
+
+
+    .topics-header h2 {
+        font-size: 27px;
+    }
+
+
+    .topic-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 22px;
+    }
+
+
+    .topic-actions {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        margin-top: 10px;
+    }
+
+
+    .topic-actions a {
+        text-align: center;
+    }
+
+
+    .search-form {
+        flex-direction: column;
+    }
+
+
+    .search-form button {
+        width: 100%;
+    }
+
+
+    .search-result-info {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .topic-page-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 25px;
+    }
+
+
+    .topic-page-header h2 {
+        font-size: 27px;
+    }
+
+
+    .entry-card {
+        padding: 22px;
+    }
+
+
+    .entry-footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .form-card {
+        padding: 25px;
+    }
+
+
+    .form-header h2 {
+        font-size: 26px;
+    }
+
+
+    .form-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .submit-button,
+    .cancel-button {
+        text-align: center;
+
+        width: 100%;
+    }
+
+
+    .delete-card {
+        padding: 30px 20px;
+    }
+
+
+    .delete-actions {
+        flex-direction: column;
+    }
+
+
+    .delete-confirm-button,
+    .delete-actions .cancel-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .auth-page {
+        padding: 25px 15px;
+    }
+
+
+    .auth-card {
+        padding: 30px 22px;
+    }
+
+
+    .auth-header h2 {
+        font-size: 26px;
+    }
+
+
+    .message {
+        align-items: flex-start;
+    }
+
+}

@@ -1,0 +1,150 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+            Learning Log
+        {% endblock title %}
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{% static 'learning_logs/style.css' %}">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+
+    <header>
+
+        <a
+            class="logo"
+            href="{% url 'learning_logs:index' %}">
+
+            <h1>
+                Learning Log
+            </h1>
+
+        </a>
+
+
+        <div class="nav-right">
+
+            {% if user.is_authenticated %}
+
+                <span class="user-greeting">
+                    Olá, {{ user.username }}!
+                </span>
+
+
+                <a
+                    class="nav-link"
+                    href="{% url 'learning_logs:topics' %}">
+
+                    Meus tópicos
+
+                </a>
+
+
+                <form
+                    action="{% url 'logout' %}"
+                    method="post">
+
+                    {% csrf_token %}
+
+                    <button
+                        class="btn btn-logout"
+                        type="submit">
+
+                        Sair
+
+                    </button>
+
+                </form>
+
+
+            {% else %}
+
+                <a
+                    class="btn btn-login"
+                    href="{% url 'login' %}">
+
+                    Entrar
+
+                </a>
+
+            {% endif %}
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTEÚDO PRINCIPAL
+    ========================== -->
+
+    <main>
+
+
+        <!-- =========================
+             MENSAGENS
+        ========================== -->
+
+        {% if messages %}
+
+            <div class="messages">
+
+                {% for message in messages %}
+
+                    <div
+                        class="message message-{{ message.tags }}">
+
+                        <span class="message-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            {{ message }}
+                        </span>
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        {% endif %}
+
+
+        <!-- =========================
+             CONTEÚDO DA PÁGINA
+        ========================== -->
+
+        {% block content %}
+
+        {% endblock content %}
+
+
+    </main>
+
+
+</body>
+
+</html>

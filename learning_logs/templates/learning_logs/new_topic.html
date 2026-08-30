@@ -1,0 +1,61 @@
+{% extends "learning_logs/base.html" %}
+
+{% block title %}Novo tópico | Learning Log{% endblock title %}
+
+{% block content %}
+
+<div class="form-page">
+
+    <div class="form-card">
+
+        <div class="form-header">
+
+            <span class="section-badge">
+                Organização
+            </span>
+
+            <h2>
+                Criar novo tópico
+            </h2>
+
+            <p>
+                Crie um tópico para organizar um novo assunto
+                que você está estudando.
+            </p>
+
+        </div>
+
+
+        <form
+            action="{% url 'learning_logs:new_topic' %}"
+            method="post"
+            class="learning-form">
+
+            {% csrf_token %}
+
+            {{ form.as_div }}
+
+            <div class="form-actions">
+
+                <button
+                    class="submit-button"
+                    name="submit"
+                    type="submit">
+                    Criar tópico
+                </button>
+
+                <a
+                    class="cancel-button"
+                    href="{% url 'learning_logs:topics' %}">
+                    Cancelar
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock content %}

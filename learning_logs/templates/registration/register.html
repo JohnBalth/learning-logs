@@ -1,0 +1,80 @@
+{% extends "learning_logs/base.html" %}
+
+{% block title %}
+    Criar conta | Learning Log
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="auth-page">
+
+    <div class="auth-card">
+
+
+        <div class="auth-header">
+
+            <div class="auth-icon">
+                📚
+            </div>
+
+            <span class="section-badge">
+                Learning Log
+            </span>
+
+            <h2>
+                Crie sua conta
+            </h2>
+
+            <p>
+                Cadastre-se para começar a organizar
+                seus estudos e acompanhar seu aprendizado.
+            </p>
+
+        </div>
+
+
+        <form
+            method="post"
+            class="learning-form">
+
+            {% csrf_token %}
+
+
+            {{ form.as_p }}
+
+
+            <button
+                class="auth-submit-button"
+                type="submit">
+
+                Criar minha conta
+
+            </button>
+
+        </form>
+
+
+        <div class="auth-footer">
+
+            <p>
+                Já possui uma conta?
+            </p>
+
+
+            <a
+                class="auth-register-link"
+                href="{% url 'login' %}">
+
+                Entrar na minha conta →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+{% endblock content %}

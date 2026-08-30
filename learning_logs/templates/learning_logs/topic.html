@@ -1,0 +1,135 @@
+{% extends "learning_logs/base.html" %}
+
+{% block title %}{{ topic.text }} | Learning Log{% endblock title %}
+
+{% block content %}
+
+<div class="topic-page-header">
+
+    <div>
+
+        <span class="section-badge">
+            Tópico de estudo
+        </span>
+
+        <h2>
+            {{ topic.text }}
+        </h2>
+
+        <p>
+            Criado em:
+            {{ topic.date_added|date:"d/m/Y" }}
+        </p>
+
+    </div>
+
+    <a
+        class="new-entry-button"
+        href="{% url 'learning_logs:new_entry' topic.id %}">
+        + Nova anotação
+    </a>
+
+</div>
+
+
+<div class="topic-summary">
+
+    {% if entries %}
+
+        <strong>{{ entries|length }}</strong>
+
+        {% if entries|length == 1 %}
+            anotação neste tópico
+        {% else %}
+            anotações neste tópico
+        {% endif %}
+
+    {% else %}
+
+        Nenhuma anotação neste tópico ainda.
+
+    {% endif %}
+
+</div>
+
+
+<div class="entries-list">
+
+    {% for entry in entries %}
+
+        <div
+            class="entry-card"
+            id="entry-{{ entry.id }}">
+
+            <div class="entry-header">
+
+                <p class="entry-date">
+                    {{ entry.date_added|date:"d/m/Y H:i" }}
+                </p>
+
+            </div>
+
+
+            <div class="entry-text">
+
+                {{ entry.text|linebreaks }}
+
+            </div>
+
+
+            <div class="entry-actions">
+
+                <a
+                    class="edit-entry-button"
+                    href="{% url 'learning_logs:edit_entry' entry.id %}">
+                    ✏️ Editar
+                </a>
+
+                <a
+                    class="delete-entry-button"
+                    href="{% url 'learning_logs:delete_entry' entry.id %}">
+                    🗑️ Excluir
+                </a>
+
+            </div>
+
+        </div>
+
+    {% empty %}
+
+        <div class="empty-entries">
+
+            <div class="empty-icon">
+                📝
+            </div>
+
+            <h3>
+                Nenhuma anotação ainda
+            </h3>
+
+            <p>
+                Comece adicionando uma anotação a este tópico.
+            </p>
+
+            <a
+                class="new-entry-button"
+                href="{% url 'learning_logs:new_entry' topic.id %}">
+                + Adicionar primeira anotação
+            </a>
+
+        </div>
+
+    {% endfor %}
+
+</div>
+
+
+<div class="back-topics">
+
+    <a href="{% url 'learning_logs:topics' %}">
+        ← Voltar para meus tópicos
+    </a>
+
+</div>
+
+{% endblock content %}

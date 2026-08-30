@@ -1,0 +1,207 @@
+{% extends "learning_logs/base.html" %}
+
+{% block title %}
+    Meus tópicos | Learning Log
+{% endblock title %}
+
+{% block content %}
+
+<div class="topics-header">
+
+    <div>
+
+        <span class="section-badge">
+            Seus estudos
+        </span>
+
+        <h2>
+            Meus tópicos
+        </h2>
+
+        <p>
+            Organize seus estudos e acompanhe
+            tudo o que você está aprendendo.
+        </p>
+
+    </div>
+
+    <a
+        class="new-topic-button"
+        href="{% url 'learning_logs:new_topic' %}">
+        + Novo tópico
+    </a>
+
+</div>
+
+
+<!-- =========================
+     PESQUISA
+========================= -->
+
+<div class="search-card">
+
+    <form
+        class="search-form"
+        method="get">
+
+        <input
+            type="text"
+            name="q"
+            value="{{ query }}"
+            placeholder="Pesquisar tópicos ou anotações..."
+            autocomplete="off">
+
+        <button type="submit">
+            Pesquisar
+        </button>
+
+    </form>
+
+</div>
+
+
+{% if query %}
+
+    <div class="search-result-info">
+
+        <p>
+
+            {% if result_count == 0 %}
+
+                Nenhum tópico encontrado para
+                <strong>"{{ query }}"</strong>.
+
+            {% else %}
+
+                Encontramos
+                <strong>{{ result_count }}</strong>
+                tópico{{ result_count|pluralize }}
+                e
+                <strong>{{ entry_count }}</strong>
+                anotaç{{ entry_count|pluralize:"ão,ões" }}
+                para
+                <strong>"{{ query }}"</strong>.
+
+            {% endif %}
+
+        </p>
+
+        <a href="{% url 'learning_logs:topics' %}">
+            Limpar pesquisa
+        </a>
+
+    </div>
+
+{% endif %}
+
+
+<!-- =========================
+     LISTA DE TÓPICOS
+========================= -->
+
+<div class="topics-list">
+
+    {% for topic in topics %}
+
+        <div class="topic-card">
+
+            <div class="topic-info">
+
+                <h3>
+                    {{ topic.text }}
+                </h3>
+
+                <p>
+                    Criado em
+                    {{ topic.date_added|date:"d/m/Y" }}
+                </p>
+
+
+                {% if query and topic.search_entries %}
+
+                    <div class="search-match">
+
+                        <strong>
+                            Anotações encontradas:
+                        </strong>
+
+                        {% for entry in topic.search_entries %}
+
+                            <p>
+                                {{ entry.text|truncatewords:30 }}
+                            </p>
+
+                        {% endfor %}
+
+                    </div>
+
+                {% endif %}
+
+            </div>
+
+
+            <div class="topic-actions">
+
+                <a
+                    class="open-topic-button"
+                    href="{% url 'learning_logs:topic' topic.id %}">
+                    Abrir tópico →
+                </a>
+
+                <a
+                    class="edit-topic-button"
+                    href="{% url 'learning_logs:edit_topic' topic.id %}">
+                    Editar
+                </a>
+
+                <a
+                    class="delete-topic-button"
+                    href="{% url 'learning_logs:delete_topic' topic.id %}">
+                    Excluir
+                </a>
+
+            </div>
+
+        </div>
+
+    {% empty %}
+
+        <div class="empty-topics">
+
+            <div class="empty-icon">
+                📚
+            </div>
+
+            <h3>
+                {% if query %}
+                    Nenhum resultado encontrado
+                {% else %}
+                    Nenhum tópico ainda
+                {% endif %}
+            </h3>
+
+            <p>
+                {% if query %}
+                    Tente pesquisar por outro termo.
+                {% else %}
+                    Comece criando seu primeiro tópico de estudo.
+                {% endif %}
+            </p>
+
+            {% if not query %}
+
+                <a
+                    class="new-topic-button"
+                    href="{% url 'learning_logs:new_topic' %}">
+                    + Criar primeiro tópico
+                </a>
+
+            {% endif %}
+
+        </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock content %}

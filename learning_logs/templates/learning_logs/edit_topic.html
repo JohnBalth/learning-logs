@@ -1,0 +1,61 @@
+{% extends "learning_logs/base.html" %}
+
+{% block title %}
+    Editar tópico | Learning Log
+{% endblock title %}
+
+{% block content %}
+
+<div class="form-page">
+
+    <div class="form-card">
+
+        <div class="form-header">
+
+            <span class="section-badge">
+                Editar tópico
+            </span>
+
+            <h2>
+                Editar tópico
+            </h2>
+
+            <p>
+                Altere o título do seu tópico de estudo.
+            </p>
+
+        </div>
+
+
+        <form
+            method="post"
+            class="learning-form">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+
+            <div class="form-actions">
+
+                <button
+                    class="submit-button"
+                    type="submit">
+                    Salvar alterações
+                </button>
+
+                <a
+                    class="cancel-button"
+                    href="{% url 'learning_logs:topic' topic.id %}">
+                    Cancelar
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock content %}
