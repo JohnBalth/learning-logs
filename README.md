@@ -70,11 +70,11 @@ python -m venv ll_env
 ll_env\Scripts\activate
 
 3. Instale as dependências
-pip install -r learnig_log/requirements.txt
+pip install -r requirements.txt
 
 4. Configure as variáveis de ambiente
 
-Crie um arquivo .env dentro da pasta learnig_log/.
+Crie um arquivo .env na raiz do projeto.
 
 Exemplo:
 
@@ -106,17 +106,17 @@ DEBUG configurável por variável de ambiente
 
 ALLOWED_HOSTS configurável por variável de ambiente
 
-arquivos .env ignorados pelo Git
+Arquivos .env ignorados pelo Git
 
-banco de dados local ignorado pelo Git
+Banco de dados local ignorado pelo Git
 
-autenticação obrigatória para áreas privadas
+Autenticação obrigatória para áreas privadas
 
-filtragem dos objetos pelo usuário autenticado
+Filtragem dos objetos pelo usuário autenticado
 
 Um ponto importante da aplicação é o controle de acesso aos dados.
 
-Por exemplo, tópicos são consultados considerando também o usuário autenticado, evitando que um usuário acesse diretamente os registros pertencentes a outra conta.
+Por exemplo, os tópicos são consultados considerando também o usuário autenticado, evitando que um usuário acesse diretamente registros pertencentes a outra conta.
 
 Próximos passos
 
@@ -124,7 +124,7 @@ Algumas melhorias planejadas para versões futuras:
 
 Adicionar testes automatizados
 
-Melhorar a interface e responsividade
+Melhorar a interface e a responsividade
 
 Otimizar consultas ao banco de dados
 
